@@ -14,7 +14,7 @@ function initAxios(config: AxiosRequestConfig, token?: any): AxiosInstance {
     
     (request:any) => {
       console.log(request)
-      request.headers!.Authorization = token??`Bearer ${import.meta.env.d.API_TOKEN}`
+      request.headers!.Authorization = token??`Bearer ${import.meta.env.API_TOKEN}`
       return request;
     },
     (error) => Promise.reject(error)

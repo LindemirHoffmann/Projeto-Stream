@@ -34,4 +34,3 @@ coverage
 .env.local
 .env.*.local
 .env
-.env.d.ts
