@@ -31,7 +31,7 @@ function initAxios(config: AxiosRequestConfig, token?: any): AxiosInstance {
   return defineInstance;
 }
 
-function api(baseURL: string = "/baseApi", token?: any) {
+function api(baseURL: string = "/Api", token?: any) {
   return initAxios(apiConfig(baseURL), token);
 }
 
