@@ -13,7 +13,6 @@ function initAxios(config: AxiosRequestConfig, token?: any): AxiosInstance {
   defineInstance.interceptors.request.use(
     
     (request:any) => {
-      console.log(request)
       request.headers!.Authorization = token??`Bearer ${import.meta.env.VITE_API_TOKEN}`
       return request;
     },
@@ -31,7 +30,7 @@ function initAxios(config: AxiosRequestConfig, token?: any): AxiosInstance {
   return defineInstance;
 }
 
-function api(baseURL: string = "/Api", token?: any) {
+function api(baseURL= "/api", token?: string) {
   return initAxios(apiConfig(baseURL), token);
 }
 

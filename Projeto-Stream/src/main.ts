@@ -1,18 +1,24 @@
 import './assets/main.css'
+
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-
 import App from './App.vue'
-import router from './router'
+import Prime from 'primevue/config'
 
-import PrimeVue from 'primevue/config';
-import setPrimeVue from './modules/prime.modules'
-import setComponent from './modules/components.module'
+import { setPrimeVueComponent } from './modules/prime.modules'
+import { setComponent } from './modules/components.module'
+import router from './router/index'
+import Lara from '@primevue/themes/lara'
+import ToastService from 'primevue/toastservice'
+import 'primeicons/primeicons.css'
 
-const app = createApp(App);
-app.use(createPinia())
-app.use(router)
-app.use(PrimeVue)
-setPrimeVue(app)
+const app = createApp(App)
+setPrimeVueComponent(app)
 setComponent(app)
+app.use(router)
+app.use(Prime, {
+  theme: {
+    preset: Lara
+  }
+})
+app.use(ToastService)
 app.mount('#app')

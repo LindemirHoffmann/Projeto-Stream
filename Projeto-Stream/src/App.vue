@@ -1,17 +1,7 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      
-    </div>
-  </header>
-
+  <navbar />
   <RouterView />
+  <prime-toast />
 </template>
-
-<style scoped>
-
-</style>
