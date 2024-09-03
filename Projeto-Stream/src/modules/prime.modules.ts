@@ -1,13 +1,14 @@
-import type { App } from "vue";
+import Menubar from 'primevue/menubar'
+import type { App } from 'vue'
+import Card from 'primevue/card'
+import Button from 'primevue/button'
+import Paginator from 'primevue/paginator'
+import Toast from 'primevue/toast'
 
-import Menubar from "primevue/menubar"; 
-import Card from "primevue/card"
-import DataView from 'primevue/dataview'
-import Paginator from "primevue/paginator";
-
-export default function setPrimeVue(app:App){
-    app.component('Menu-bar', Menubar)
-    app.component('Card', Card)
-    app.component('data-vew', DataView)
-    app.component('paginator', Paginator)
+export function setPrimeVueComponent(app: App) {
+  app.component('prime-menubar', Menubar)
+  app.component('prime-card', Card)
+  app.component('prime-button', Button)
+  app.component('prime-paginator', Paginator)
+  app.component('prime-toast', Toast)
 }
