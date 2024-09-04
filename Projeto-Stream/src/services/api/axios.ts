@@ -31,7 +31,6 @@ function initAxios(config: AxiosRequestConfig, token?: any): AxiosInstance {
 }
 
 function api(baseURL= "/api", token?: string) {
-  return initAxios(apiConfig(baseURL), token);
+  return initAxios(apiConfig(baseURL), token)
 }
-
 export { api };
