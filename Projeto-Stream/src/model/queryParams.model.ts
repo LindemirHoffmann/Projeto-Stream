@@ -1,6 +1,6 @@
-export class QueryParamsModel{
-    constructor(
-        public type?: string,
-        public id?: string
-    ){}
+export class QueryParamsModel {
+  constructor(
+    public type?: string,
+    public id?: string
+  ) {}
 }
